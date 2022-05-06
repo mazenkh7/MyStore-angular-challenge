@@ -1,0 +1,12 @@
+img{
+  border-radius: 5vh/4vh;
+  min-width: 10rem;
+  width: 10rem;
+}
+
+input{
+  min-width: 40px;
+  max-width: 40px;
+  padding-right: 0;
+  padding-left: 2px;
+}

@@ -1,0 +1,24 @@
+<form class="card prod-card" (ngSubmit)="addToCart()">
+  <img class="card-img-top" src="{{product.url}}" alt="Card image cap" routerLink="/product/{{product.id}}">
+  <div class="card-body">
+    <div class="row">
+      <h6 class="fw-bold col-7">{{product.name}}</h6>
+      <h6 class="col-5">${{product.price}}</h6>
+    </div>
+    <div class="row justify-content-around">
+      <select name="amount" [(ngModel)]="quantity" class="form-select-sm col-4">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select><br>
+      <input type="submit" class="btn btn-primary btn-green   col-6" value="Add To Cart"><br>
+    </div>
+  </div>
+</form>

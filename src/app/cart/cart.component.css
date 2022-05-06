@@ -1,0 +1,30 @@
+.empty{
+  margin-top: 100px;
+}
+
+input{
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.form-control:focus:invalid {
+  border-color: red;
+  box-shadow: 0 0 0 0.2rem red;
+}
+
+.form-control:focus:valid {
+  border-color: green;
+  box-shadow: 0 0 0 0.2rem green;
+}
+
+input:invalid {
+  border: 3px solid red;
+}
+
+input:valid{
+  border: 3px solid green;
+}
+
+.form-error{
+  color: red;
+}

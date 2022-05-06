@@ -1,0 +1,43 @@
+<div class="row m-1">
+  <div class="empty col-12 text-center" *ngIf="cartItems.length==0">
+    <h1 class="mt-5">Cart Empty</h1>
+    <hr>
+    <h6>Add items from the products catalogue to checkout!</h6>
+    <div class="mt-3">
+      <a routerLink="/">← Back to products list</a>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <app-cart-item *ngFor="let item of cartItems"
+                   [item]=item></app-cart-item>
+  </div>
+
+  <div class="col-6 mt-2" *ngIf="cartItems.length>0">
+    <form class="form-control col-12 " #form="ngForm" (ngSubmit)="submitOrder()">
+      <h1 class="mt-5">Submit order</h1>
+      <hr>
+      <h4>Full name</h4>
+      <input type="text" pattern="[a-zA-Z ]*" class="col-12 form-control" placeholder="(minimum 6 characters)" required minlength="6"
+             maxlength="50" autocomplete="name" name="fullName" [(ngModel)]="fullName" #fn="ngModel">
+      <h6 class="form-error mt-1" *ngIf="fn.invalid && fn.dirty">Enter valid full name.</h6>
+
+      <h4 class="mt-2">Address</h4>
+      <input type="text" class="col-12 form-control" placeholder="(minimum 6 characters)" required minlength="6" maxlength="100"
+      autocomplete="address" name="address" [(ngModel)]="address" #adrs="ngModel">
+      <h6 class="form-error mt-1" *ngIf="adrs.invalid && adrs.dirty">Enter valid address.</h6>
+
+
+      <h4 class="mt-2">Credit card number</h4>
+      <input type="tel" inputmode="numeric" pattern="[0-9]{16}" autocomplete="cc-number" name="ccNumber"
+             class="col-12 form-control" placeholder="(16-digit number)" required minlength="16" maxlength="16" [(ngModel)]="ccNumber"
+              #ccNum="ngModel">
+      <h6 class="form-error mt-1" *ngIf="ccNum.invalid && ccNum.dirty">Enter valid credit card number.</h6>
+      <h6>We will never share your payment information with anyone else.</h6>
+
+
+      <h4 class="mt-3">Total: ${{sum}}</h4>
+      <input type="submit" class="btn btn-success" [disabled]="form.invalid">
+    </form>
+
+  </div>
+</div>

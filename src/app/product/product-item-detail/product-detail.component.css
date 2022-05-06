@@ -1,0 +1,16 @@
+img{
+  border-radius: 5vh/3vh;
+  width: 25rem;
+}
+
+h1{
+  font-size: 65px;
+}
+
+form{
+}
+
+.btn-green{
+  background-color: green;
+  color: white;
+}

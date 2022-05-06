@@ -1,0 +1,16 @@
+.prod-card {
+  width: 14rem;
+  height: 27rem;
+}
+
+img {
+  cursor: pointer;
+}
+
+h1{
+  text-overflow: ellipsis;
+}
+
+.btn-green{
+  background-color: green;
+}

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="m-3 row  justify-content-center">
+    <img src="{{product?.url}}" alt="{{product?.name}}" class="col-5">
+    <form class="col-5 mt-5" (ngSubmit)="addToCart()">
+      <div class="row">
+        <h1 class="mt-5">{{product?.name}}</h1>
+        <hr>
+        <h2 class="">${{product?.price}}</h2>
+        <h4 class="">{{product?.description}}</h4>
+      </div>
+      <div class="row">
+        <select name="amount" [(ngModel)]="quantity" class="select-input col-2 mt-5 ms-2 form-select-sm">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <input type="submit" name="submit" id="submit" value="Add to cart" class="btn btn-green col-3 mt-5 ms-4 ps-2">
+      </div>
+      <div class="mt-5">
+        <a routerLink="/">← Back to products list</a>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+*{
+  color: white;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background-color: deepskyblue;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline;
+}
+
+a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
